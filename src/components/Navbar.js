@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavbarButton from './NavbarButton'
 import { CgScreenMirror } from 'react-icons/cg'
 import { ImStack } from 'react-icons/im'
@@ -10,45 +10,61 @@ import { IoSettingsOutline } from 'react-icons/io5'
 const styles = {
     position: 'absolute',
     width: '250px',
-    height: '320px',
     left: '0px',
     top: '56px',
     borderRight: '#ecf1f4 solid',
     height: '-webkit - fill - available'
 }
 
-export default function Navbar() {
 
+
+export default function Navbar() {
     const buttons = [
         {
             name: "Dashboard",
-            icon: () => <CgScreenMirror />
+            icon: () => <CgScreenMirror />,
+            selected: false
         },
         {
             name: "Inventory",
-            icon: () => <ImStack />
+            icon: () => <ImStack />,
+            selected: false
         },
         {
             name: "Orders",
-            icon: () => <RiShoppingBag3Line />
+            icon: () => <RiShoppingBag3Line />,
+            selected: false
         },
         {
             name: "Customers",
-            icon: () => <IoPeopleOutline />
+            icon: () => <IoPeopleOutline />,
+            selected: false
         },
         {
             name: "Reports",
-            icon: () => <MdDescription />
+            icon: () => <MdDescription />,
+            selected: false
         },
         {
             name: "Settings",
-            icon: () => <IoSettingsOutline />
+            icon: () => <IoSettingsOutline />,
+            selected: false
         }
     ]
+    const [buttonDetails, setButtonDetails] = useState(buttons)
+
+    const onNavButtonClick = (e) => {
+        setButtonDetails(buttons.map(button => button.name === e ? { ...button, selected: true } : button));
+    }
 
     return (
         <nav style={styles}>
-            {buttons.map(button => <NavbarButton key={buttons.name} {...button} />)}
+            {buttonDetails.map(button =>
+                <NavbarButton
+                    key={buttons.name}
+                    onNavButtonClick={onNavButtonClick}
+                    {...button}
+                />)}
         </nav>
     )
 }
