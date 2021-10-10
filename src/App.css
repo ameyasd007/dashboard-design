@@ -27,7 +27,7 @@ header {
   right: 55.62%;
   top: 21.43%;
   bottom: 21.43%;
-  width: 300px;
+  width: 300px !important;
 }
 .search-icon {
   position: absolute;
@@ -67,16 +67,7 @@ header {
   color: white;
 }
 
-.navbar {
-  position: absolute;
-  width: 250px;
-  height: 320px;
-  left: 0px;
-  top: 56px;
-  border-right: #ecf1f4 solid;
-  height: -webkit-fill-available;
-}
-
-.main {
+main {
   grid-area: "main";
+  margin: 65px 0 0 250px;
 }

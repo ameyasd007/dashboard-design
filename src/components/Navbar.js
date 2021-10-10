@@ -59,9 +59,9 @@ export default function Navbar() {
 
     return (
         <nav style={styles}>
-            {buttonDetails.map(button =>
+            {buttonDetails.map((button, i) =>
                 <NavbarButton
-                    key={buttons.name}
+                    key={i}
                     onNavButtonClick={onNavButtonClick}
                     {...button}
                 />)}
