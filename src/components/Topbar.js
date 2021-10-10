@@ -11,11 +11,10 @@ export default function Topbar() {
             <FormControl className="search-box" type="text" placeholder="&nbsp; &nbsp; &nbsp; Search wines, customers here..." />
             <FiBell className="notification-bell" />
             <div className="user-menu">
-                <p style={{ color: 'white' }}>Nicholas D</p>
-                <img src="https://www.seekpng.com/png/full/356-3562377_personal-user.png" style={{ borderRadius: "50%", width: "40px", height: "40px", right: "20px", position: "absolute" }} />
+                <p style={{ color: 'white', paddingTop: "15px" }}>Nicholas D</p>
+                <img src="https://www.seekpng.com/png/full/356-3562377_personal-user.png" alt="" style={{ borderRadius: "50%", width: "40px", height: "40px", right: "20px", position: "absolute" }} />
                 <FiChevronDown className='expand-user-menu' />
             </div>
-
         </header>
     )
 }

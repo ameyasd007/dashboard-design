@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainArea from './components/MainArea';
-import Navbar from './components/Navbar';
+import Navbar from './components/side-navbar/Navbar';
 import Topbar from './components/Topbar';
 
 function App() {

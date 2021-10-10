@@ -13,7 +13,7 @@ const styles = {
     left: '0px',
     top: '56px',
     borderRight: '#ecf1f4 solid',
-    height: '-webkit - fill - available'
+    height: '-webkit-fill-available'
 }
 
 
@@ -23,7 +23,7 @@ export default function Navbar() {
         {
             name: "Dashboard",
             icon: () => <CgScreenMirror />,
-            selected: false
+            selected: true
         },
         {
             name: "Inventory",
@@ -53,8 +53,11 @@ export default function Navbar() {
     ]
     const [buttonDetails, setButtonDetails] = useState(buttons)
 
-    const onNavButtonClick = (e) => {
-        setButtonDetails(buttons.map(button => button.name === e ? { ...button, selected: true } : button));
+    const onNavButtonClick = (buttonName) => {
+        setButtonDetails(buttons.map(button =>
+            button.name === buttonName
+                ? { ...button, selected: true }
+                : { ...button, selected: false }));
     }
 
     return (

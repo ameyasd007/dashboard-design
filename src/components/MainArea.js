@@ -1,16 +1,16 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import Inventory from './Inventory'
-import Overview from './Overview'
-import SalesDetail from './SalesDetail'
+import Inventory from './inventory/Inventory'
+import Overview from './overview/Overview'
+import SalesDetails from './SalesDetails'
 
 export default function MainArea() {
     return (
         <main >
             <Container>
                 <Overview />
-                <SalesDetail></SalesDetail>
-                <Inventory></Inventory>
+                <SalesDetails></SalesDetails>
+                <Inventory ></Inventory>
             </Container>
         </main>
     )
