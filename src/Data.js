@@ -64,7 +64,7 @@ export const wineDetails = [
   },
   {
     id: 5,
-    product: "Staglin Family Vineyard INEO Red Wine",
+    product: "K Vintners Syrah Cattle king",
     avgRating: "RP 95,+3",
     vintage: "2015",
     qty: "25",
@@ -78,7 +78,7 @@ export const wineDetails = [
   },
   {
     id: 6,
-    product: "Staglin Family Vineyard INEO Red Wine",
+    product: "L'Ecole No. 41 Ferguson",
     avgRating: "RP 95,+3",
     vintage: "2004",
     qty: "04",
